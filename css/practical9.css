@@ -13,11 +13,12 @@
     /* overflow: hidden; */
     /* margin-bottom: 12px; */
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex;
+    justify-content: center; */
+    /* align-items: center; */
     /* margin-bottom: 10px; */
     /* position: fixed; */
+    
   }
   h1 {
     margin: 0;
@@ -27,19 +28,30 @@
     background-color: gray;
     height: 60px;
     color: white;
+    line-height: 60px;
+    /* line-height: 70px; */
     
   }
-  .header ul{
-      height: 100%;
-      width: 100%;
-      display: inline-flex;
+  .menu{
+      /* position:absolute; */
+      
+        float: right;
+      /* height: 100%; */
+      /* width: 100%; */
+       display: inline-flex;
       justify-content: center;
       align-items: center;
       /* border: 2px solid red; */
       /* margin: 0 auto; */
       color: white;
+      line-height: 10px;
+      /* right: 10px; */
+      
+      /* border:2px solid black */
   }
-  .header ul li{
+  .menu li{
+      /* float: right; */
+      /* display: none; */
       padding: 10px;
       list-style: none;
       /* border: 2px solid black; */
@@ -50,14 +62,14 @@
       /* height: 10?0%; */
   }
 
-  .header ul li a{
+  .menu li a{
       text-decoration: none;
       color: white;
       font-size: 22px;
       padding: 15px;
       /* height: 100%; */
   }
-  .header ul li a:hover{
+  .menu li a:hover{
       background-color: white;
       color: black;
   }
@@ -120,9 +132,6 @@
   #team4{
       background-image: url('../Assests/team4.png');
   }
-.icon{
-    display: none;
-}
   .section-2 {
     height: 610px;
     text-align: center;
@@ -360,38 +369,63 @@
       
   }
 
+  .icon,.icon1{
+      position: absolute;
+      float: right;
+      font-size: 30px;
+      right: 50px;
+      /* line-height: 10px; */
+      color: white;
+      /* border: 2px solid red; */
+      display: none;
+  }
+  .icon:hover,.icon1:hover{
+      color: skyblue;
+  }
+  #chk{
+      position: absolute;
+      visibility: hidden;
+      z-index: -1;
+  }
+
   @media screen and (max-width:800px) {
+      
+    .menu{
+        /* display: none; */
+        position: fixed;
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        top:0px;
+        text-align: center;
+        padding: 10px 0;
+        transition: 0.7s;
+        line-height: normal;
+    }
+   
       .icon{
           display: block;
-          position: absolute;
-          right: 20px;
+          /* right: 20px; */
       }
-      .icon i{
-          color: white;
-          background-color: black;
-          font-size: 25px;
-          /* margin-right: 0; */
-      }
-      .icon input{
-          visibility: hidden;
-          margin: 0;
-          position: absolute;
-          right: 0px;
-      }
-      .header ul{
-        position: fixed;
-        top: 0;
-        right:-100%;
-        width: 100%;
-        height: 100vh;
-        background-color: black;
-        text-align: center;
-        padding: 80px 0;
-        transition: .7s;
 
-    }
-      .icon input:checked ~ .header ul{
-          right:0;
+      #chk:checked ~ .menu{
+          right: 0;
+          transition: .4s;
       }
-      
+      .menu{
+          display: block;
+      }
+      .menu li{
+          display: block;
+      }
+      .menu li a{
+          display: block;
+      }
+      .icon1{
+          display: block;
+          position: absolute;
+          top: 0px;
+
+      }
   }

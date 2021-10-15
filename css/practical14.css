@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+}
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+.container h1{
+    font-size: 50px;
+    color: white;
+    margin-bottom: 15px;
+}
+button{
+    margin: 20px;
+    padding: 20px;
+    background-color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+}
+span{
+    font-size: 30px;
+    color: yellow;
+    margin: 20px;
+}

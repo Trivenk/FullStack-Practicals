@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical14</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/practical14.css">
+</head>
+<body>
+    <div class="container">
+        <h1>COUNTER</h1>
+        <div class="counter">
+            <button id="minus" disabled onclick="minus()">-</button>
+            <span>0</span>
+            <button onclick="inc()">+</button>
+            
+        </div>
+    </div>
+    <script>
+        const val = document.querySelector("span");
+        function inc(){
+            console.log(val.innerText);
+            val.innerText = parseInt(val.innerText) +1;
+            // console.log(val.innerText);
+            document.getElementById("minus").disabled=false;
+        }
+        function minus(){
+            const value = parseInt(val.innerText);
+            if(value>0)
+            {
+                val.innerText = value - 1;
+            }
+            if(parseInt(val.innerText)===0)
+            {
+                document.getElementById("minus").disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>

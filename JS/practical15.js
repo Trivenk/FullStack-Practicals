@@ -49,8 +49,9 @@ function chechEmail(val)
     }
     else{
         document.getElementById('2').innerText = "Invalid Email";
-        // val.style.border = '2px solid red';
+        val.style.border = '2px solid red';
         document.getElementById("icon5").style.visibility = "visible";
+        document.getElementById("icon1").style.visibility = "hidden";
     }
 }
 function validateEmail(email) {
